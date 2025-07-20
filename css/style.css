@@ -62,7 +62,61 @@ h1 {
     margin: 0 auto 1rem;
 }
 
+/* SCP財団ロゴスタイル */
+.scp-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    /* animation: logoSpin 3s linear infinite; */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+}
+
+/* CSS製財団ロゴ（SVGがない場合の代替） */
+.css-logo {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    position: relative;
+    border: 3px solid white;
+    border-radius: 50%;
+    animation: logoSpin 3s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    font-size: 12px;
+    color: white;
+}
+
+.css-logo::before {
+    content: "SCP";
+    position: absolute;
+}
+
+.css-logo::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 @keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes logoSpin {
     0% {
         transform: rotate(0deg);
     }

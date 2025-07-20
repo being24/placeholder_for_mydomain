@@ -12,7 +12,13 @@
     <div class="container" id="container">
         <h1>Domain Reserved</h1>
         <p class="subtitle">このドメインは取得済みです</p>
-        <div class="spinner"></div>
+
+        <!-- SCP財団ロゴ（SVG版） -->
+        <img src="images/scp-logo.svg" alt="SCP Foundation Logo" class="scp-logo" id="scpLogo">
+
+        <!-- CSS製ロゴ（フォールバック） -->
+        <div class="css-logo" id="cssLogo" style="display: none;"></div>
+
         <div class="countdown" id="countdown">
             メインサイトに移動します... <span id="timer">5</span>秒
         </div>

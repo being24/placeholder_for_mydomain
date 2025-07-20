@@ -9,6 +9,24 @@ const CONFIG = {
 // DOM要素
 const timerElement = document.getElementById('timer');
 const containerElement = document.getElementById('container');
+const scpLogoElement = document.getElementById('scpLogo');
+const cssLogoElement = document.getElementById('cssLogo');
+
+// ロゴフォールバック機能
+function setupLogoFallback() {
+    if (scpLogoElement) {
+        scpLogoElement.addEventListener('error', () => {
+            // SVGロゴが読み込めない場合、CSS製ロゴを表示
+            scpLogoElement.style.display = 'none';
+            if (cssLogoElement) {
+                cssLogoElement.style.display = 'flex';
+            }
+        });
+    }
+}
+
+// 初期化時にロゴフォールバックを設定
+setupLogoFallback();
 
 // カウントダウン変数
 let countdown = CONFIG.COUNTDOWN_SECONDS;
