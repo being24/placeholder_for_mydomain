@@ -1,0 +1,16 @@
+# GitHub Pages設定
+title: "Placeholder Site"
+description: "ドメインプレースホルダサイト - リダイレクト先準備中"
+
+# GitHub Pagesの基本設定
+baseurl: ""
+url: ""
+
+# プラグイン
+plugins:
+  - jekyll-sitemap
+
+# 除外ファイル
+exclude:
+  - README.md
+  - .gitignore

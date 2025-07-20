@@ -1,0 +1,21 @@
+{
+    "name": "placeholder-site",
+    "version": "1.0.0",
+    "description": "ドメインプレースホルダサイト with TypeScript",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "clean": "rm -rf js/*"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0"
+    },
+    "keywords": [
+        "placeholder",
+        "redirect",
+        "github-pages",
+        "typescript"
+    ],
+    "author": "",
+    "license": "MIT"
+}
